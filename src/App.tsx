@@ -1,6 +1,3 @@
-import { createSignal } from 'solid-js'
-import solidLogo from './assets/solid.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import FGPage from './FormGear'
 
@@ -14,15 +11,12 @@ function App() {
   };
 
   return (
-    <>
-<FGPage
-              template={template}
+      <FGPage
+            template={template}
               validation={validation}
               response={obj}
               mode={1}
       />
-
-    </>
   )
 }
 
