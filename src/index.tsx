@@ -21,4 +21,9 @@ window.addEventListener('message', (event) => {
 
 const root = document.getElementById('root')
 
-render(() => <App />, root!)
+setTimeout(() => {
+    render(() => <App />, root!)
+}, 2000);
+
+
+
