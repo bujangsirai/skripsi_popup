@@ -7,14 +7,8 @@ import validation from "./default/validation.json";
 function App() {
 
 
-  window.addEventListener('message', (event) => {
-
-    if (event.origin !== 'http://localhost:5174') {
-      console.log('data sesat');
-      return; // Ignore messages from other origins
-      }
-    console.log('Data received:', event.data);
-       } );
+  console.log("window.my_special_setting")
+  console.log(window.my_special_setting)
 
   let obj = {
     answers: [],
