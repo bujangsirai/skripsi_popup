@@ -10,6 +10,12 @@ function App() {
     answers: [],
   };
 
+  window.addEventListener("message", function(event) {
+    let sessionData = event.data;
+    console.log("Session Data Received:", sessionData);
+  }, false);
+
+
   return (
       <FGPage
             template={template}
