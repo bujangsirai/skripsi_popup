@@ -3,9 +3,6 @@ import { createSignal } from 'solid-js';
 import './App.css'
 import FGPage from './FormGear'
 
-import template from "./default/template.json";
-import validation from "./default/validation.json";
-
 function App() {
 
   const [terLoad , setTerLoad] = createSignal(false);
@@ -19,7 +16,7 @@ function App() {
     // a domain we trust.
 
     console.log("epent orijin " , event.origin)
-    if (event.origin !== 'http://localhost:5174') { return; }
+    if (event.origin !== 'http://localhost:5173') { return; }
     
     // Create a local copy of the variable we were passed.
     let dataReceive = event.data;
