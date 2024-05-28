@@ -11,22 +11,22 @@ function App() {
   };
 
 
-      // Function to retrieve session data from localStorage
-      function getSessionData() {
-        let sessionData = localStorage.getItem("sessionData");
-        if (sessionData) {
-          sessionData = JSON.parse(sessionData);
-          console.log("Session Data Retrieved:", sessionData);
-  
-          // Display session data in the popup
+  // Function to retrieve session data from sessionStorage
+  function getSessionData() {
+    let sessionData = sessionStorage.getItem("sessionData");
+    if (sessionData) {
+      sessionData = JSON.parse(sessionData);
+      console.log("Session Data Retrieved:", sessionData);
 
-        } else {
-          console.log("No session data found");
-        }
-      }
-  
-      // Retrieve session data when the popup is fully loaded
-      window.onload = getSessionData;
+      // Display session data in the popup
+      document.getElementById("sessionData").innerText = JSON.stringify(sessionData);
+    } else {
+      console.log("No session data found");
+    }
+  }
+
+  // Retrieve session data when the popup is fully loaded
+  window.onload = getSessionData;
 
   return (
       <FGPage
