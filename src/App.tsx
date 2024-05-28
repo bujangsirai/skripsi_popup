@@ -8,7 +8,8 @@ function App() {
 
 
   console.log("window.my_special_setting")
-  console.log(window.my_special_setting)
+  let meBe = localStorage.getItem('testing');
+  console.log(meBe);
 
   let obj = {
     answers: [],
