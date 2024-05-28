@@ -8,8 +8,13 @@ function App() {
 
 
   window.addEventListener('message', (event) => {
-            console.log('Data received:', event.data);
-        }, false);
+
+    if (event.origin !== 'http://localhost:5174') {
+      console.log('data sesat');
+      return; // Ignore messages from other origins
+      }
+    console.log('Data received:', event.data);
+       } );
 
   let obj = {
     answers: [],
