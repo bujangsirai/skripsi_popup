@@ -16,7 +16,7 @@ function App() {
     // a domain we trust.
 
     console.log("epent orijin " , event.origin)
-    if (event.origin !== 'http://localhost:5173') { return; }
+    if (event.origin !== 'https://skripsi-real.vercel.app') { return; }
     
     // Create a local copy of the variable we were passed.
     let dataReceive = event.data;
